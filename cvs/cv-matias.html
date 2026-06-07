@@ -1,1 +1,141 @@
-<!-- en construcción -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Matías Villegas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body class="bg-light d-flex justify-content-center align-items-center" style="min-height:100vh;">
+
+  <!-- BOTÓN -->
+  <button class="btn btn-dark btn-lg" data-bs-toggle="modal" data-bs-target="#cvModal">
+    CV - Matías Villegas
+  </button>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+
+        <!-- HEADER -->
+        <div class="modal-header bg-dark text-white">
+          <!-- CAMBIAR: nombre -->
+          <div>
+            <h5 class="modal-title mb-0" id="cvModalLabel">Matías Villegas</h5>
+            <!-- CAMBIAR: descripción breve -->
+            <small class="text-secondary">Técnico en Redes · Desarrollo Web · Cloud</small>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- BODY -->
+        <div class="modal-body p-4">
+
+          <!-- CONTACTO -->
+          <h6 class="border-bottom pb-1 mb-2">Contacto</h6>
+          <ul class="list-unstyled small mb-3">
+            <!-- CAMBIAR: datos de contacto -->
+            <li>📞 2615657846</li>
+            <li>✉️ maty230299@gmail.com</li>
+            <li>💼 LinkedIn: @MatiasVillegas</li>
+            <li>🐙 GitHub: <a href="https://github.com/maty2399">github.com/maty2399</a></li>
+            <li>📍 Mendoza - Guaymallén</li>
+          </ul>
+
+          <!-- PERFIL -->
+          <h6 class="border-bottom pb-1 mb-2">Perfil</h6>
+          <!-- CAMBIAR: descripción personal -->
+          <p class="small mb-3">Técnico con experiencia en soporte y administración de sistemas, orientado a la ciberseguridad y arquitectura cloud. Busco aplicar mis conocimientos en entornos modernos y contribuir a equipos de seguridad o ingeniería de infraestructura.</p>
+
+          <!-- HABILIDADES TÉCNICAS -->
+          <h6 class="border-bottom pb-1 mb-2">Habilidades técnicas</h6>
+          <!-- CAMBIAR: agregá o quitá badges -->
+          <div class="mb-3">
+            <span class="badge bg-primary me-1 mb-1">HTML</span>
+            <span class="badge bg-primary me-1 mb-1">CSS</span>
+            <span class="badge bg-primary me-1 mb-1">JavaScript</span>
+            <span class="badge bg-primary me-1 mb-1">Bootstrap</span>
+            <span class="badge bg-primary me-1 mb-1">Java</span>
+            <span class="badge bg-primary me-1 mb-1">React</span>
+            <span class="badge bg-primary me-1 mb-1">MySQL</span>
+            <span class="badge bg-primary me-1 mb-1">Git</span>
+            <span class="badge bg-primary me-1 mb-1">AWS</span>
+            <span class="badge bg-primary me-1 mb-1">Redes LAN/WAN</span>
+          </div>
+
+          <!-- APTITUDES -->
+          <h6 class="border-bottom pb-1 mb-2">Aptitudes</h6>
+
+          <!-- CAMBIAR: habilidades blandas -->
+          <div class="mb-3">
+            <span class="badge bg-secondary me-1 mb-1">Trabajo en equipo</span>
+            <span class="badge bg-secondary me-1 mb-1">Comunicación</span>
+            <span class="badge bg-secondary me-1 mb-1">Aprendizaje continuo</span>
+            <span class="badge bg-secondary me-1 mb-1">Creatividad</span>
+            <span class="badge bg-secondary me-1 mb-1">Investigación</span>
+          </div>
+
+          <!-- IDIOMAS -->
+          <h6 class="border-bottom pb-1 mb-2">Idiomas</h6>
+
+          <!-- CAMBIAR: idiomas y nivel -->
+          <ul class="small mb-3">
+            <li>Español - Nativo</li>
+            <li>Inglés - A2 (Técnico)</li>
+          </ul>
+
+          <!-- EXPERIENCIA — si no tenés, borrá esta sección -->
+          <h6 class="border-bottom pb-1 mb-2">Experiencia laboral</h6>
+          <div class="small mb-2">
+            <strong>Soporte en Sistemas</strong> - Municipalidad de Maipú
+            <span class="text-muted"> · 2022 - Actualidad</span>
+            <ul class="mt-1">
+              <li>Mantenimiento y armado de equipos</li>
+              <li>Instalación de S.O. y software</li>
+              <li>Administración de usuarios (Active Directory)</li>
+              <li>Gestión de redes LAN y WAN</li>
+            </ul>
+          </div>
+          <div class="small mb-3">
+            <strong>Reparación de Computadoras</strong> - Autónomo
+            <span class="text-muted"> · 2014 - 2020</span>
+            <ul class="mt-1">
+              <li>Reemplazo de hardware e instalación de S.O.</li>
+            </ul>
+          </div>
+
+          <!-- FORMACIÓN -->
+          <h6 class="border-bottom pb-1 mb-2">Formación académica</h6>
+
+          <!-- CAMBIAR: carrera e institución -->
+          <div class="small mb-2">
+            <strong>Tecnicatura Superior en Redes, Telecomunicaciones y Ciberseguridad</strong>
+            <span class="text-muted d-block">IES Manuel Belgrano · 1er año en curso</span>
+          </div>
+          <div class="small mb-3">
+            <strong>Orientación Contable, Impositiva y Previsional</strong>
+            <span class="text-muted d-block">Escuela Abelardo Vázquez · 2013 - 2017</span>
+          </div>
+
+          <!-- CERTIFICACIONES — si no tenés, borrá esta sección -->
+          <h6 class="border-bottom pb-1 mb-2">Certificaciones y cursos</h6>
+          <ul class="small">
+            <li><strong>Arquitectura e Ingeniería Cloud</strong> - Fundación Educativa Santísima Trinidad (2026)</li>
+            <li><strong>Desarrollo Web Full-Stack</strong> - EGG (2022/2023)</li>
+            <li><strong>Soporte IT</strong> - Junior Achievement & Google (2021)</li>
+          </ul>
+
+        </div><!-- /modal-body -->
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

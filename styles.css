@@ -1,0 +1,144 @@
+ body {
+      background-color: #0f172a;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+    .navbar {
+      background-color: #1e293b !important;
+      border-bottom: 1px solid #334155;
+    }
+    .navbar-brand {
+      color: #fff !important;
+      font-weight: 600;
+    }
+    .nav-link {
+      color: #94a3b8 !important;
+      transition: color .2s;
+    }
+    .nav-link:hover {
+      color: #fff !important;
+    }
+    .hero {
+      padding: 80px 0 50px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #fff;
+    }
+    .hero p {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin-top: 8px;
+    }
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 1.5rem;
+    }
+    /* Tarjetas CV */
+    .cv-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: border-color .2s, transform .2s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .cv-card:hover {
+      border-color: #60a5fa;
+      transform: translateY(-4px);
+      color: inherit;
+    }
+    .cv-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #fff;
+      margin: 0 auto 1rem;
+    }
+    .cv-card h5 {
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .cv-card small {
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+    .cv-card .btn-ver {
+      margin-top: 1rem;
+      font-size: 0.8rem;
+      padding: 6px 18px;
+      border-radius: 20px;
+      border: 1px solid #334155;
+      background: transparent;
+      color: #94a3b8;
+      transition: all .2s;
+    }
+    .cv-card:hover .btn-ver {
+      border-color: #60a5fa;
+      color: #60a5fa;
+    }
+    /* Tarjetas proyectos */
+    .project-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: border-color .2s, transform .2s;
+      text-decoration: none;
+      display: block;
+      color: inherit;
+    }
+    .project-card:hover {
+      border-color: #60a5fa;
+      transform: translateY(-4px);
+      color: inherit;
+    }
+    .project-icon {
+      font-size: 2rem;
+      margin-bottom: 0.75rem;
+    }
+    .project-card h5 {
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .project-card p {
+      color: #64748b;
+      font-size: 0.8rem;
+      margin-bottom: 0;
+    }
+    .badge-tech {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: #0f172a;
+      color: #60a5fa;
+      border: 1px solid #1e40af;
+      margin: 3px 2px 0;
+      display: inline-block;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #334155;
+      font-size: 0.8rem;
+      margin-top: 3rem;
+      border-top: 1px solid #1e293b;
+    }
