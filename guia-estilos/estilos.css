@@ -1,6 +1,5 @@
 /* ================================================
    GUÍA DE ESTILOS - Dietética Natural
-   Archivo CSS separado (requerido por la consigna)
    ================================================ */
 
 /* ----------------
@@ -169,7 +168,7 @@ body {
 
 /* ----------------
    ACORDEÓN DE TEXTOS
-   El truco: usamos checkbox invisible + label como cabecera
+   Usamos checkbox invisible + label como cabecera
    Cuando el checkbox está marcado, mostramos el cuerpo
    ---------------- */
 .gs-acordeon {
@@ -400,8 +399,7 @@ body {
 }
 
 /* ----------------
-   CÓDIGO INLINE
-   Para mostrar nombres de propiedades CSS
+   mostrar nombres de propiedades CSS
    ---------------- */
 code {
     background-color: #0f172a;
