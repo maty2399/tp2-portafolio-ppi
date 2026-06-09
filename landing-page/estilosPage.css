@@ -7,11 +7,11 @@
       background-color: #004080;
     }
     .navbar-brand, .nav-link {
-      color: #fff !important;
+      color: #71e180 !important;
     }
     .carousel-item img {
-      height: 400px;
-      object-fit: cover;
+      height: 500px;
+      object-fit: contain;
     }
     .beneficios {
       background-color: #e6f0ff;
