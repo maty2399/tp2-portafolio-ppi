@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Tareas - Dietética Natural</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #1e293b;
+            min-height: 100vh;
+            padding-bottom: 3rem;
+        }
+
+        h1 {
+            color: #f8fafc;
+        }
+
+        p.subtitulo {
+            color: #94a3b8;
+        }
+
+        .card-light {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        }
+
+        /* Estilos de los inputs y textareas */
+        .form-label {
+            font-weight: 700;
+            color: #0f172a;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .form-control, .form-select {
+            border: 1px solid #cbd5e1;
+            padding: 10px 14px;
+            font-size: 0.9rem;
+            border-radius: 8px;
+            color: #1e293b;
+            background-color: #ffffff;
+        }
+
+        .form-control:focus, .form-select:focus {
+            background-color: #eff6ff;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+            outline: none;
+        }
+
+        textarea.form-control {
+            resize: none;
+        }
+
+        /* Botón de envío */
+        .btn-enviar {
+            background-color: #2563eb !important;
+            border: none;
+            color: white !important;
+            transition: background-color 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .btn-enviar:hover {
+            background-color: #1d4ed8 !important;
+        }
+
+        /* Bloques de reportes guardados */
+        .reporte-item {
+            background-color: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 12px;
+            transition: transform 0.2s;
+        }
+
+        .reporte-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .badge-nombre {
+            background-color: #2563eb;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+            text-transform: uppercase;
+        }
+
+        .badge-seccion {
+            background-color: #e2e8f0;
+            color: #0f172a;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 999px;
+        }
+
+        /* Toast */
+        #toast-guardado {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #1e293b;
+            color: #f8fafc;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        #toast-guardado.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container my-4" style="max-width: 700px;">
+
+        <div class="text-center mb-4">
+            <h1 class="fw-bold fs-2">Dietética Natural</h1>
+            <p class="subtitulo fs-6">Formulario Individual de Avances</p>
+        </div>
+
+        <div class="card-light p-4 mb-4">
+            <h4 class="text-uppercase fw-bold mb-4" style="color: #0f172a; letter-spacing: 0.05em; font-size: 0.9rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 10px;">
+                Registrar mis tareas
+            </h4>
+            
+            <form id="formulario-tareas">
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre del Integrante</label>
+                    <select id="nombre" class="form-select" required>
+                        <option value="" disabled selected>Selecciona tu nombre...</option>
+                        <option value="Matías">Matías</option>
+                        <option value="Gabriela">Gabriela</option>
+                        <option value="Daniela">Daniela</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="seccion" class="form-label">Sección del Proyecto</label>
+                    <select id="seccion" class="form-select" required>
+                        <option value="" disabled selected>Selecciona la sección...</option>
+                        <option value="Página Web">Página Web</option>
+                        <option value="Formulario">Formulario</option>
+                        <option value="Comentarios Generales">Comentarios Generales</option>
+                        <option value="Según el Enunciado">Según el Enunciado</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="tareas" class="form-label">Tareas Específicas Realizadas</label>
+                    <textarea id="tareas" class="form-control" rows="4" placeholder="Describe detalladamente qué tareas completaste..." required></textarea>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-enviar rounded-pill fw-bold px-5 py-2 shadow-sm">
+                        Enviar Reporte
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card-light p-4">
+            <h4 class="text-uppercase fw-bold mb-3" style="color: #0f172a; letter-spacing: 0.05em; font-size: 0.9rem;">
+                Historial de Tareas Enviadas
+            </h4>
+            
+            <div id="contenedor-reportes">
+                <p class="text-muted italic fs-6 text-center py-3 m-0" id="sin-reportes">No hay reportes enviados todavía.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="toast-guardado">✅ Reporte agregado y guardado correctamente</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Array global para manejar los reportes en memoria
+        let listaReportes = [];
+
+        // Elementos del DOM
+        const formulario = document.getElementById('formulario-tareas');
+        const contenedorReportes = document.getElementById('contenedor-reportes');
+        const mensajeSinReportes = document.getElementById('sin-reportes');
+        const toast = document.getElementById('toast-guardado');
+
+        // Función para renderizar los reportes en la pantalla
+        function mostrarReportes() {
+            // Limpiar contenedor dejando solo el mensaje vacío si no hay datos
+            contenedorReportes.innerHTML = '';
+            
+            if (listaReportes.length === 0) {
+                contenedorReportes.appendChild(mensajeSinReportes);
+                return;
+            }
+
+            // Crear el HTML para cada reporte de la lista (del más nuevo al más viejo)
+            listaReportes.slice().reverse().forEach((reporte) => {
+                const item = document.createElement('div');
+                item.className = 'reporte-item';
+                item.innerHTML = `
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <span class="badge-nombre me-2">${reporte.nombre}</span>
+                            <span class="badge-seccion">${reporte.seccion}</span>
+                        </div>
+                        <small class="text-muted" style="font-size: 0.75rem;">${reporte.fecha}</small>
+                    </div>
+                    <p class="m-0 text-secondary" style="font-size: 0.9rem; white-space: pre-line;">${reporte.tareas}</p>
+                `;
+                contenedorReportes.appendChild(item);
+            });
+        }
+
+        // Escuchar el envío del formulario
+        formulario.addEventListener('submit', function (e) {
+            e.preventDefault(); // Evita que la página se recargue
+
+            // Capturar los valores ingresados
+            const nombreSeleccionado = document.getElementById('nombre').value;
+            const seccionSeleccionada = document.getElementById('seccion').value;
+            const tareasEscritas = document.getElementById('tareas').value;
+            
+            // Obtener la fecha y hora actual formateada
+            const ahora = new Date();
+            const fechaFormateada = ahora.toLocaleDateString() + ' - ' + ahora.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+            // Crear el nuevo objeto de reporte
+            const nuevoReporte = {
+                nombre: nombreSeleccionado,
+                seccion: seccionSeleccionada,
+                tareas: tareasEscritas,
+                fecha: fechaFormateada
+            };
+
+            // Agregar al array de datos
+            listaReportes.push(nuevoReporte);
+
+            // Guardar el array completo actualizado en LocalStorage
+            localStorage.setItem('historial_tareas_dietetica', JSON.stringify(listaReportes));
+
+            // Actualizar la vista en pantalla
+            mostrarReportes();
+
+            // Limpiar el formulario para el siguiente integrante
+            formulario.reset();
+
+            // Mostrar el toast de confirmación exitosa
+            toast.classList.add('visible');
+            setTimeout(() => toast.classList.remove('visible'), 2500);
+        });
+
+        // Cargar el historial guardado al cargar la página por primera vez
+        window.addEventListener('load', function () {
+            const datosGuardados = localStorage.getItem('historial_tareas_dietetica');
+            if (datosGuardados) {
+                listaReportes = JSON.parse(datosGuardados);
+                mostrarReportes();
+            }
+        });
+    </script>

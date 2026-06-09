@@ -1,1 +1,186 @@
-<!-- en construcción -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Estilos - Dietética Natural</title>
+
+    <link href="estilos.css" rel="stylesheet"/>
+</head>
+<body>
+
+    <!-- Encabezado principal -->
+    <header class="gs-header">
+        <h1 class="gs-titulo">Dietética Natural</h1>
+        <p class="gs-subtitulo">Guía de Estilos · Componentes visuales del proyecto</p>
+    </header>
+
+    <main class="gs-contenedor">
+
+        <!-- ================================
+             SECCIÓN 1: PALETA DE COLORES
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Paleta de colores</h2>
+            <div class="gs-paleta">
+                <div class="gs-color">
+                    <div class="gs-muestra" style="background:#2563eb;"></div>
+                    <span class="gs-color-nombre">Primario</span>
+                    <span class="gs-color-hex">#2563eb</span>
+                </div>
+                <div class="gs-color">
+                    <div class="gs-muestra" style="background:#0f172a;"></div>
+                    <span class="gs-color-nombre">Oscuro</span>
+                    <span class="gs-color-hex">#0f172a</span>
+                </div>
+                <div class="gs-color">
+                    <div class="gs-muestra" style="background:#16a34a;"></div>
+                    <span class="gs-color-nombre">Verde</span>
+                    <span class="gs-color-hex">#16a34a</span>
+                </div>
+                <div class="gs-color">
+                    <div class="gs-muestra" style="background:#f8fafc; border: 1px solid #e2e8f0;"></div>
+                    <span class="gs-color-nombre">Claro</span>
+                    <span class="gs-color-hex">#f8fafc</span>
+                </div>
+                <div class="gs-color">
+                    <div class="gs-muestra" style="background:#dc2626;"></div>
+                    <span class="gs-color-nombre">Error</span>
+                    <span class="gs-color-hex">#dc2626</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================
+             SECCIÓN 2: TIPOGRAFÍA
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Tipografía</h2>
+            <div class="gs-tipo-card">
+                <p class="gs-tipo-h1">Título principal — 2rem bold</p>
+                <p class="gs-tipo-h2">Subtítulo de sección — 1.25rem semibold</p>
+                <p class="gs-tipo-body">Texto de cuerpo — 1rem regular. Usado para descripciones, párrafos y contenido general de la página.</p>
+                <p class="gs-tipo-small">Texto pequeño — 0.85rem · Para etiquetas, fechas y datos secundarios.</p>
+            </div>
+        </section>
+
+        <!-- ================================
+             SECCIÓN 3: ACORDEÓN DE TEXTOS
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Acordeón de textos</h2>
+
+            <!-- Acordeón usando checkbox para abrir/cerrar -->
+            <div class="gs-acordeon">
+
+                <div class="gs-acordeon-item">
+                    <!-- El checkbox controla si el contenido se muestra -->
+                    <input type="checkbox" id="acc1" class="gs-acc-check">
+                    <label for="acc1" class="gs-acc-header">
+                        ¿Qué productos vendemos?
+                        <span class="gs-acc-icono">+</span>
+                    </label>
+                    <div class="gs-acc-body">
+                        Ofrecemos una amplia variedad de productos naturales: semillas, frutos secos, harinas integrales, suplementos, infusiones y snacks saludables. Todos seleccionados con el mejor criterio de calidad.
+                    </div>
+                </div>
+
+                <div class="gs-acordeon-item">
+                    <input type="checkbox" id="acc2" class="gs-acc-check">
+                    <label for="acc2" class="gs-acc-header">
+                        ¿Hacemos envíos?
+                        <span class="gs-acc-icono">+</span>
+                    </label>
+                    <div class="gs-acc-body">
+                        Sí, realizamos envíos a toda la provincia de Mendoza. Los pedidos superiores a $5.000 tienen envío gratis. El tiempo de entrega es de 24 a 48 horas hábiles.
+                    </div>
+                </div>
+
+                <div class="gs-acordeon-item">
+                    <input type="checkbox" id="acc3" class="gs-acc-check">
+                    <label for="acc3" class="gs-acc-header">
+                        ¿Cuáles son los medios de pago?
+                        <span class="gs-acc-icono">+</span>
+                    </label>
+                    <div class="gs-acc-body">
+                        Aceptamos efectivo, transferencia bancaria y tarjetas de débito y crédito. También podemos coordinar pagos en cuotas para compras mayoristas.
+                    </div>
+                </div>
+
+                <div class="gs-acordeon-item">
+                    <input type="checkbox" id="acc4" class="gs-acc-check">
+                    <label for="acc4" class="gs-acc-header">
+                        ¿Tienen local físico?
+                        <span class="gs-acc-icono">+</span>
+                    </label>
+                    <div class="gs-acc-body">
+                        Sí, nuestro local está ubicado en Godoy Cruz, Mendoza. Podés visitarnos de lunes a viernes de 9 a 18 hs.
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================================
+             SECCIÓN 4: FOCO EN INPUTS
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Foco en campos de formulario</h2>
+            <p class="gs-descripcion">Hacé click en cada campo para ver el efecto de foco.</p>
+            <div class="gs-inputs-demo">
+                <div class="gs-input-grupo">
+                    <label class="gs-input-label">Nombre</label>
+                    <!-- El efecto de foco se define en el CSS con :focus -->
+                    <input type="text" class="gs-input" placeholder="Tu nombre completo">
+                </div>
+                <div class="gs-input-grupo">
+                    <label class="gs-input-label">Email</label>
+                    <input type="email" class="gs-input" placeholder="tu@email.com">
+                </div>
+                <div class="gs-input-grupo">
+                    <label class="gs-input-label">Búsqueda de productos</label>
+                    <input type="text" class="gs-input" placeholder="Ej: semillas, proteínas...">
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================
+             SECCIÓN 5: BOTONES 3D
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Botones 3D</h2>
+            <p class="gs-descripcion">El efecto 3D se logra con <code>box-shadow</code> y se hunde al hacer click.</p>
+            <div class="gs-botones">
+                <!-- Cada botón tiene una clase distinta para su color -->
+                <button class="gs-btn gs-btn-primario">Ver productos</button>
+                <button class="gs-btn gs-btn-verde">Contactanos</button>
+                <button class="gs-btn gs-btn-oscuro">Ver promociones</button>
+                <button class="gs-btn gs-btn-rojo">Cancelar</button>
+            </div>
+        </section>
+
+        <!-- ================================
+             SECCIÓN 6: ENLACES ANIMADOS
+        ================================ -->
+        <section class="gs-seccion">
+            <h2 class="gs-seccion-titulo">Enlaces animados</h2>
+            <p class="gs-descripcion">Pasá el mouse por encima para ver la animación de color.</p>
+            <nav class="gs-nav-demo">
+                <!-- La animación se define en el CSS con ::after y transition -->
+                <a href="#" class="gs-enlace">Inicio</a>
+                <a href="#" class="gs-enlace">Productos</a>
+                <a href="#" class="gs-enlace">Promociones</a>
+                <a href="#" class="gs-enlace">Contacto</a>
+                <a href="#" class="gs-enlace">Sobre nosotros</a>
+            </nav>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="gs-footer">
+        <p>Dietética Natural · Guía de Estilos · TP2 Practica Profesionalizante · 2026</p>
+    </footer>
+
+</body>
+</html>

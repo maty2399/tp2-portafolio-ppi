@@ -1,1 +1,411 @@
-<!-- en construcción -->
+/* ================================================
+   GUÍA DE ESTILOS - Dietética Natural
+   ================================================ */
+
+/* ----------------
+   VARIABLES GLOBALES
+   ---------------- */
+:root {
+    --color-primario: #2563eb;
+    --color-primario-sombra: #1a47b8;
+    --color-verde: #16a34a;
+    --color-verde-sombra: #0f6e30;
+    --color-oscuro: #0f172a;
+    --color-oscuro-sombra: #020617;
+    --color-rojo: #dc2626;
+    --color-rojo-sombra: #991b1b;
+    --color-claro: #f8fafc;
+    --color-borde: #e2e8f0;
+    --color-texto: #1e293b;
+    --color-texto-suave: #64748b;
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --radio-borde: 10px;
+    --transicion: 0.25s ease;
+}
+
+/* ----------------
+   RESET Y BASE
+   ---------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-oscuro);
+    color: var(--color-texto);
+    line-height: 1.6;
+}
+
+/* ----------------
+   ENCABEZADO
+   ---------------- */
+.gs-header {
+    background-color: #1e293b;
+    border-bottom: 1px solid #334155;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+.gs-titulo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 0.4rem;
+}
+
+.gs-subtitulo {
+    font-size: 0.9rem;
+    color: #94a3b8;
+}
+
+/* ----------------
+   CONTENEDOR PRINCIPAL
+   ---------------- */
+.gs-contenedor {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ----------------
+   SECCIONES
+   ---------------- */
+.gs-seccion {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    border-radius: var(--radio-borde);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.gs-seccion-titulo {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-primario);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #334155;
+}
+
+.gs-descripcion {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-bottom: 1.25rem;
+}
+
+/* ----------------
+   PALETA DE COLORES
+   ---------------- */
+.gs-paleta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gs-color {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.gs-muestra {
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+}
+
+.gs-color-nombre {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.gs-color-hex {
+    font-size: 0.72rem;
+    color: #64748b;
+    font-family: monospace;
+}
+
+/* ----------------
+   TIPOGRAFÍA
+   ---------------- */
+.gs-tipo-card {
+    background-color: #0f172a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.gs-tipo-h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #f8fafc;
+}
+
+.gs-tipo-h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.gs-tipo-body {
+    font-size: 1rem;
+    color: #94a3b8;
+}
+
+.gs-tipo-small {
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+/* ----------------
+   ACORDEÓN DE TEXTOS
+   Usamos checkbox invisible + label como cabecera
+   Cuando el checkbox está marcado, mostramos el cuerpo
+   ---------------- */
+.gs-acordeon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.gs-acordeon-item {
+    border: 1px solid #334155;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Ocultamos el checkbox pero lo mantenemos funcional */
+.gs-acc-check {
+    display: none;
+}
+
+/* Cabecera del acordeón */
+.gs-acc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color var(--transicion);
+}
+
+.gs-acc-header:hover {
+    background-color: #1e293b;
+}
+
+/* Ícono + que cambia a - cuando está abierto */
+.gs-acc-icono {
+    font-size: 1.2rem;
+    color: var(--color-primario);
+    transition: transform var(--transicion);
+    font-weight: 300;
+}
+
+/* Cuerpo del acordeón - oculto por defecto */
+.gs-acc-body {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1.25rem;
+    background-color: #1e293b;
+    color: #94a3b8;
+    font-size: 0.88rem;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+}
+
+/* Cuando el checkbox está marcado: mostramos el cuerpo y rotamos el ícono */
+.gs-acc-check:checked + .gs-acc-header .gs-acc-icono {
+    transform: rotate(45deg);
+}
+
+.gs-acc-check:checked ~ .gs-acc-body {
+    max-height: 200px;
+    padding: 1rem 1.25rem;
+}
+
+/* ----------------
+   FOCO EN INPUTS
+   El efecto se activa con la pseudoclase :focus
+   ---------------- */
+.gs-inputs-demo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 420px;
+}
+
+.gs-input-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.gs-input-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #94a3b8;
+}
+
+.gs-input {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    /* Borde normal: gris suave */
+    border: 2px solid #334155;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    outline: none;
+    /* Transición suave al enfocar */
+    transition: border-color var(--transicion), box-shadow var(--transicion);
+}
+
+.gs-input::placeholder {
+    color: #475569;
+}
+
+/* Efecto de foco: borde azul + sombra */
+.gs-input:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* ----------------
+   BOTONES 3D
+   El efecto 3D se logra con box-shadow en el eje Y
+   Al hacer :active (click) se mueve hacia abajo y la sombra desaparece
+   ---------------- */
+.gs-botones {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.gs-btn {
+    padding: 0.65rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    /* Transición suave */
+    transition: transform var(--transicion), box-shadow var(--transicion);
+}
+
+/* Botón azul primario */
+.gs-btn-primario {
+    background-color: var(--color-primario);
+    color: #fff;
+    /* Sombra inferior = efecto 3D */
+    box-shadow: 0 5px 0 var(--color-primario-sombra);
+}
+
+/* Botón verde */
+.gs-btn-verde {
+    background-color: var(--color-verde);
+    color: #fff;
+    box-shadow: 0 5px 0 var(--color-verde-sombra);
+}
+
+/* Botón oscuro */
+.gs-btn-oscuro {
+    background-color: #334155;
+    color: #e2e8f0;
+    box-shadow: 0 5px 0 #1e293b;
+}
+
+/* Botón rojo */
+.gs-btn-rojo {
+    background-color: var(--color-rojo);
+    color: #fff;
+    box-shadow: 0 5px 0 var(--color-rojo-sombra);
+}
+
+/* Al pasar el mouse: sube un poco */
+.gs-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Al hacer click: se hunde, la sombra desaparece */
+.gs-btn:active {
+    transform: translateY(4px);
+    box-shadow: none;
+}
+
+/* ----------------
+   ENLACES ANIMADOS
+   La animación usa ::after como línea que crece al hacer hover
+   ---------------- */
+.gs-nav-demo {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.gs-enlace {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #94a3b8;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    /* Transición del color del texto */
+    transition: color var(--transicion);
+}
+
+/* Línea animada debajo del enlace */
+.gs-enlace::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primario);
+    /* La línea crece de izquierda a derecha */
+    transition: width var(--transicion);
+}
+
+/* Al pasar el mouse: cambia color y crece la línea */
+.gs-enlace:hover {
+    color: var(--color-primario);
+}
+
+.gs-enlace:hover::after {
+    width: 100%;
+}
+
+/* ----------------
+   PIE DE PÁGINA
+   ---------------- */
+.gs-footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #334155;
+    font-size: 0.8rem;
+    border-top: 1px solid #1e293b;
+    margin-top: 1rem;
+}
+
+/* ----------------
+   mostrar nombres de propiedades CSS
+   ---------------- */
+code {
+    background-color: #0f172a;
+    color: #60a5fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.82rem;
+    font-family: monospace;
+}
