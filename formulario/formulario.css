@@ -1,0 +1,63 @@
+ /* El fondo general sigue siendo oscuro para combinar con tu web */
+        body {
+            background-color: #0f172a;
+            color: #1e293b; /* Texto general oscuro para las tarjetas claras */
+        }
+
+        /* ACLARAMOS LAS TARJETAS: Ahora son de un gris clarito muy elegante */
+        .card-light {
+            background-color: #f8fafc; 
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Títulos principales dentro de las tarjetas */
+        .titulo-tarjeta {
+            color: #0f172a !important;
+            font-weight: 700;
+        }
+
+        /* Subtítulos o etiquetas */
+        .label-tarjeta {
+            color: #334155 !important;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* INPUTS BLANCOS Y LIMPIOS: Máxima legibilidad */
+        .form-control-custom {
+            background-color: #ffffff !important;
+            border: 1px solid #cbd5e1 !important;
+            color: #0f172a !important;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        /* Efecto celeste cuando hacés clic para escribir */
+        .form-control-custom:focus {
+            border-color: #3b82f6 !important;
+            box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+        }
+
+        /* Marcador de posición (placeholder) */
+        .form-control-custom::placeholder {
+            color: #94a3b8;
+        }
+
+        /* Textos secundarios del detalle */
+        .text-muted-custom {
+            color: #64748b !important;
+        }
+
+        /* Botón de enviar con un lindo azul brillante */
+        .btn-enviar-pedido {
+            background-color: #2563eb !important;
+            border: none;
+            color: white !important;
+            transition: background-color 0.2s;
+        }
+
+        .btn-enviar-pedido:hover {
+            background-color: #1d4ed8 !important;
+        }
+  
