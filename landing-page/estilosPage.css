@@ -1,60 +1,264 @@
+:root {
+  --verde: #3f6338;
+  --verde-oscuro: #29452b;
+  --verde-suave: #e9efe2;
+  --crema: #fbfaf5;
+  --texto: #343a32;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: #f5f9fc;
-  color: #003366;
-  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--crema);
+  color: var(--texto);
+  font-family: "Segoe UI", sans-serif;
 }
 
 .navbar {
-  background-color: #004080;
+  background-color: #fff;
+  box-shadow: 0 2px 14px rgba(41, 69, 43, 0.1);
 }
 
-/* Agregás .navbar .nav-link para mayor especificidad y que no pise Bootstrap */
-.navbar-brand,
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--verde-oscuro);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navbar-brand:hover {
+  color: var(--verde);
+}
+
+.navbar-brand img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.navbar-brand small {
+  display: block;
+  color: #687560;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
 .navbar .nav-link {
-  color: #71e180 !important;
+  color: var(--verde-oscuro);
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  transition: color 0.2s ease;
 }
 
-/* El carrusel necesita object-fit: cover, no contain,
-   para que las imágenes llenen el ancho sin barras blancas */
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  color: #799342;
+}
+
+.navbar-toggler {
+  border-color: #d7dfd1;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(63, 99, 56, 0.2);
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20, 35, 22, 0.65), rgba(20, 35, 22, 0.08));
+  content: "";
+}
+
 .carousel-item img {
-  height: 500px;
+  width: 100%;
+  height: clamp(300px, 48vw, 560px);
   object-fit: cover;
-  width: 100%;   /* forzás que todas las imágenes respeten el ancho, no solo la primera */
+}
+
+.carousel-caption {
+  z-index: 1;
+  right: auto;
+  bottom: 50%;
+  left: max(8%, calc((100% - 1140px) / 2));
+  max-width: 560px;
+  padding: 1rem;
+  text-align: left;
+  transform: translateY(50%);
+}
+
+.carousel-caption h1,
+.carousel-caption h2 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  font-weight: 700;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-caption p {
+  margin-bottom: 1.25rem;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.btn-driada {
+  border: 0;
+  border-radius: 2rem;
+  background-color: var(--verde);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.7rem 1.4rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-driada:hover,
+.btn-driada:focus {
+  background-color: var(--verde-oscuro);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.beneficios,
+.productos {
+  padding: 5rem 0;
 }
 
 .beneficios {
-  background-color: #e6f0ff;
-  padding: 50px 0;
+  background-color: var(--verde-suave);
+}
+
+.eyebrow {
+  margin-bottom: 0.5rem;
+  color: var(--verde);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.beneficios h2,
+.productos h2 {
+  margin-bottom: 1rem;
+  color: var(--verde-oscuro);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+}
+
+.beneficio-card {
+  height: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #fff;
+  box-shadow: 0 8px 24px rgba(41, 69, 43, 0.09);
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.beneficio-card:hover {
+  box-shadow: 0 12px 30px rgba(41, 69, 43, 0.15);
+  transform: translateY(-4px);
+}
+
+.beneficio-card img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.beneficio-card h3 {
+  padding: 1.25rem 1.25rem 0;
+  color: var(--verde-oscuro);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.beneficio-card p {
+  margin: 0;
+  padding: 0.25rem 1.25rem 1.5rem;
+  line-height: 1.65;
+}
+
+.productos {
+  background-color: var(--crema);
+}
+
+.productos > .container > p:not(.eyebrow) {
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+}
+
+.productos-img {
+  display: block;
+  width: min(100%, 520px);
+  max-height: 520px;
+  margin: 0 auto 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 28px rgba(41, 69, 43, 0.14);
+  object-fit: cover;
 }
 
 footer {
-  background-color: #004080;
+  padding: 2rem 1rem;
+  background-color: var(--verde-oscuro);
   color: #fff;
-  padding: 20px 0;
   text-align: center;
 }
 
-/* El div.diet debe alinearse dentro del navbar, no con margin:auto solo */
-div.diet {
-  display: flex;
-  align-items: center;   /* centrás verticalmente el logo */
-  gap: 20px;
-  padding: 10px 20px;
-  width: auto;           /* width: 30% en navbar rompe el layout en móvil */
+footer p {
+  margin: 0.4rem 0;
 }
 
-div.diet img {
-  width: 120px;          /* mejor valor fijo para un logo que porcentaje */
-  height: auto;
-  padding: 0;
+footer a {
+  color: #e0edc9;
+  font-weight: 600;
+  text-underline-offset: 0.2em;
 }
 
-/* La regla img general estaba aplicando width:30% a TODAS las imágenes,
-   incluyendo el carrusel. Mejor apuntás a las imágenes de beneficios */
-.beneficios img {
-  width: 60%;
-  max-width: 400px;
-  padding: 15px 0;
-  display: block;
-  margin: 0 auto;
+footer a:hover {
+  color: #fff;
+}
+
+@media (max-width: 575.98px) {
+  .navbar-brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .navbar-brand {
+    font-size: 1.05rem;
+  }
+
+  .carousel-item img {
+    height: 360px;
+  }
+
+  .carousel-caption {
+    right: 8%;
+    left: 8%;
+    padding: 0;
+  }
+
+  .carousel-caption p {
+    font-size: 0.95rem;
+  }
+
+  .beneficios,
+  .productos {
+    padding: 3.5rem 0;
+  }
+
+  .beneficio-card img {
+    height: 200px;
+  }
 }

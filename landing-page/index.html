@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Driada Dietética y Herboristería</title>
-  <link rel="stylesheet" href="estilosPage.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilosPage.css">
 </head>
 <body>
 
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
-    <div class="diet">
-    <img src="images/Captura de pantalla 2026-06-07 190830.png">
-    </div>
     <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <a class="navbar-brand" href="#" aria-label="Driada Dietética y Herboristería, inicio">
+        <img src="images/Captura de pantalla 2026-06-07 190830.png" alt="Logo de Driada">
+        <span>Driada <small>Dietética y Herboristería</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
@@ -29,72 +30,97 @@
   </nav>
 
   <!-- Carrusel -->
-
-  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="images/Healthy Birthday Cake Idea _ DIY Nut Cake Gift.jpg" class="d-block w-100">
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" aria-label="Productos de Driada">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/Healthy Birthday Cake Idea _ DIY Nut Cake Gift.jpg" class="d-block w-100" alt="Selección de frutos secos">
+        <div class="carousel-caption">
+          <h1>Lo natural, cerca tuyo</h1>
+          <p>Encontrá opciones ricas para sumar a tu día.</p>
+          <a class="btn btn-driada" href="#productos">Conocé nuestros productos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/imagen2.png" class="d-block w-100" alt="Productos naturales de Driada">
+        <div class="carousel-caption">
+          <h2>Elegí sentirte bien</h2>
+          <p>Variedad de productos para todos los días.</p>
+          <a class="btn btn-driada" href="#productos">Conocé nuestros productos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/beGIN Spices _ Especiarias para Gin Tônica _ Chá caseiro, Embalagem de frutas, Receitas com gin.jpg" class="d-block w-100" alt="Especias y productos para infusiones">
+        <div class="carousel-caption">
+          <h2>Sabores que inspiran</h2>
+          <p>Descubrí nuevas combinaciones y disfrutá cada momento.</p>
+          <a class="btn btn-driada" href="#productos">Conocé nuestros productos</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/imagen4.jpg" class="d-block w-100" alt="Productos de la dietética Driada">
+        <div class="carousel-caption">
+          <h2>Un poquito más natural</h2>
+          <p>Acercate a conocer todo lo que tenemos para vos.</p>
+          <a class="btn btn-driada" href="#productos">Conocé nuestros productos</a>
+        </div>
+      </div>
     </div>
-    <div class="carousel-item">
-      <img src="images/imagen2.png" class="d-block w-10" >
-    </div>
-    <div class="carousel-item">
-      <img src="images/beGIN Spices _ Especiarias para Gin Tônica _ Chá caseiro, Embalagem de frutas, Receitas com gin.jpg" class="d-block w-10" >
-    </div>
-    <div class="carousel-item">
-      <img src="images/imagen4.jpg" class="d-block w-10" >
-    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
 
   <!-- Beneficios -->
-<section id="beneficios" class="beneficios text-center">
-  <div class="container">
-    <h2 class="mb-4">Beneficios de nuestros productos</h2>
-    <div class="row g-4">
+  <section id="beneficios" class="beneficios text-center">
+    <div class="container">
+      <p class="eyebrow">Driada · natural y rico</p>
+      <h2>Beneficios de nuestros productos</h2>
+      <div class="row g-4 mt-2">
 
-      <!-- Imagenes -->
-      <div class="col-md-4">
-        <h4>🌱 Alimentación consciente</h4>
-        <p>Productos naturales y orgánicos que cuidan tu salud y el medio ambiente.</p>
-        <img src="images/download.jpg" alt="Alimentación consciente">
+        <!-- Imagenes -->
+        <div class="col-md-4">
+          <article class="beneficio-card">
+            <img src="images/download.jpg" alt="Alimentos para una alimentación consciente">
+            <h3>🌱 Alimentación consciente</h3>
+            <p>Productos naturales y orgánicos que cuidan tu salud y el medio ambiente.</p>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="beneficio-card">
+            <img src="images/Instagram.jpg" alt="Productos para energía y bienestar">
+            <h3>💪 Energía y bienestar</h3>
+            <p>Frutos secos, cereales y suplementos para mantener tu cuerpo activo y equilibrado.</p>
+          </article>
+        </div>
+
+        <div class="col-md-4">
+          <article class="beneficio-card">
+            <img src="images/imagen1.png" alt="Yogures y quesos de origen vegetal">
+            <h3>🥛 Alternativas vegetales</h3>
+            <p>Yogures y quesos sin lácteos, ideales para dietas veganas o intolerancias.</p>
+          </article>
+        </div>
+
       </div>
-
-      <div class="col-md-4">
-        <h4>💪 Energía y bienestar</h4>
-        <p>Frutos secos, cereales y suplementos para mantener tu cuerpo activo y equilibrado.</p>
-        <img src="images/Instagram.jpg" alt="Energía y bienestar">
-      </div>
-
-      <div class="col-md-4">
-        <h4>🥛 Alternativas vegetales</h4>
-        <p>Yogures y quesos sin lácteos, ideales para dietas veganas o intolerancias.</p>
-        <img src="images/imagen1.png" alt="Alternativas vegetales">
-      </div>
-
     </div>
+  </section>
 
-    <!-- Productos  -->
-    <div class="row mt-5" id="productos">
-      <div class="col-12 text-center">
-        <h4>🛒 Productos</h4>
-        <p>Frutos secos, cereales y suplementos para mantener tu cuerpo activo y equilibrado.</p>
-        <img src="images/imagen3.jpg" alt="Productos">
-      </div>
+  <!-- Productos -->
+  <section id="productos" class="productos text-center">
+    <div class="container">
+      <p class="eyebrow">Elegí tus favoritos</p>
+      <h2>Productos</h2>
+      <p>Frutos secos, cereales y suplementos para mantener tu cuerpo activo y equilibrado.</p>
+      <img src="images/imagen3.jpg" alt="Estantes con productos de Driada" class="productos-img">
+      <a class="btn btn-driada" href="#contacto">Consultanos</a>
     </div>
-
-  </div>
-</section>
-
-  
+  </section>
 
   <!-- Footer -->
   <footer id="contacto">
