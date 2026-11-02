@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechShop - Catálogo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="barra">
+        <h1>🛒 TechShop</h1>
+        <button id="btn-carrito" class="btn-carrito" type="button" aria-label="Abrir carrito">
+            🛒 Carrito <span id="contador-carrito" class="contador">0</span>
+        </button>
+    </header>
+
+    <main class="contenedor">
+
+        <!-- Buscador y filtros -->
+        <section class="filtros" aria-label="Buscador y filtros">
+            <div class="campo campo-buscador">
+                <label for="buscador">Buscar producto</label>
+                <input id="buscador" type="search" placeholder="Ej: teclado, tp-link, 1 tb..." autocomplete="off">
+            </div>
+
+            <div class="campo">
+                <label for="filtro-categoria">Categoría</label>
+                <select id="filtro-categoria"><option value="">Todas</option></select>
+            </div>
+
+            <div class="campo">
+                <label for="filtro-marca">Marca</label>
+                <select id="filtro-marca"><option value="">Todas</option></select>
+            </div>
+
+            <div class="campo">
+                <label for="precio-min">Precio mínimo</label>
+                <input id="precio-min" type="number" min="0" step="1000" placeholder="$ 0">
+            </div>
+
+            <div class="campo">
+                <label for="precio-max">Precio máximo</label>
+                <input id="precio-max" type="number" min="0" step="1000" placeholder="$ sin límite">
+            </div>
+
+            <div class="campo">
+                <label for="orden">Ordenar por</label>
+                <select id="orden">
+                    <option value="">Sin orden</option>
+                    <option value="precio-asc">Precio: menor a mayor</option>
+                    <option value="precio-desc">Precio: mayor a menor</option>
+                    <option value="nombre">Nombre (A-Z)</option>
+                </select>
+            </div>
+
+            <button id="btn-limpiar" class="btn-secundario" type="button">Limpiar filtros</button>
+        </section>
+
+        <p id="resultados" class="resultados" aria-live="polite"></p>
+
+        <!-- Cuadrícula del catálogo -->
+        <section id="catalogo" class="grilla" aria-label="Catálogo de productos"></section>
+    </main>
+
+    <!-- Modal: detalle del producto -->
+    <dialog id="modal-producto" class="modal">
+        <div id="detalle-producto" class="modal-contenido"></div>
+    </dialog>
+
+    <!-- Modal: carrito -->
+    <dialog id="modal-carrito" class="modal">
+        <div class="modal-contenido">
+            <div class="modal-encabezado">
+                <h2>Tu carrito</h2>
+                <button class="btn-cerrar" data-cerrar type="button" aria-label="Cerrar">✕</button>
+            </div>
+            <div id="lista-carrito"></div>
+        </div>
+    </dialog>
+
+    <div id="aviso" class="aviso" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

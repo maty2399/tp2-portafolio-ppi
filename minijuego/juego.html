@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minijuego: Atrapa el Bug</title>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+
+    <div class="game-container">
+        <h1>🐛 Atrapa el Bug 🐛</h1>
+        <p>¡Depura el código haciendo clic en los bugs antes de que se escapen!</p>
+
+        <div class="scoreboard">
+            <span>Puntaje: <strong id="score">0</strong></span>
+            <span>Nivel: <strong id="level">-</strong></span>
+            <span>Vidas: <strong id="lives">3</strong></span>
+        </div>
+
+        <div id="play-area">
+            <!-- Pantalla de inicio / fin de juego -->
+            <div id="start-screen">
+                <h2 id="screen-title">¿Listo para depurar?</h2>
+                <p id="screen-msg">Elige la dificultad y empieza.</p>
+                <label for="difficulty">Dificultad:</label>
+                <select id="difficulty">
+                    <option value="facil">Fácil</option>
+                    <option value="medio" selected>Medio</option>
+                    <option value="dificil">Difícil</option>
+                </select>
+                <button id="start-btn">Iniciar Juego</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="juego.js"></script>
+</body>
+</html>

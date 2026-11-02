@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "nombre": "Mouse Gamer Logitech G203",
+    "categoria": "Periféricos",
+    "marca": "Logitech",
+    "precio": 28900,
+    "stock": 8,
+    "imagen": "img/Mouse g203.jpg",
+    "descripcion": "Mouse con cable pensado para jugar y trabajar, con iluminación RGB y botones programables.",
+    "especificaciones": ["Sensor de hasta 8000 DPI", "6 botones programables", "Iluminación RGB"]
+  },
+  {
+    "id": 2,
+    "nombre": "Teclado Mecánico Redragon Kumara",
+    "categoria": "Periféricos",
+    "marca": "Redragon",
+    "precio": 54900,
+    "stock": 5,
+    "imagen": "img/Teclado Mecánico Redragon Kumara.jpg",
+    "descripcion": "Teclado mecánico compacto, sin teclado numérico, ideal para ahorrar espacio en el escritorio.",
+    "especificaciones": ["Formato compacto (TKL)", "Switches mecánicos", "Retroiluminación LED"]
+  },
+  {
+    "id": 3,
+    "nombre": "Auriculares HyperX Cloud Stinger",
+    "categoria": "Audio",
+    "marca": "HyperX",
+    "precio": 62500,
+    "stock": 3,
+    "imagen": "img/Auriculares HyperX Cloud Stinger.jpg",
+    "descripcion": "Auriculares livianos con micrófono para jugar, estudiar o hacer videollamadas.",
+    "especificaciones": ["Micrófono giratorio", "Conexión jack 3,5 mm", "Almohadillas acolchadas"]
+  },
+  {
+    "id": 4,
+    "nombre": "Parlante Bluetooth JBL Go 3",
+    "categoria": "Audio",
+    "marca": "JBL",
+    "precio": 39900,
+    "stock": 10,
+    "imagen": "img/Parlante Bluetooth JBL Go 3.jpeg",
+    "descripcion": "Parlante portátil y resistente al agua, para llevar a todos lados.",
+    "especificaciones": ["Conexión Bluetooth", "Resistente al agua y al polvo (IP67)", "Formato portátil"]
+  },
+  {
+    "id": 5,
+    "nombre": "SSD Kingston NV2 500 GB",
+    "categoria": "Almacenamiento",
+    "marca": "Kingston",
+    "precio": 47000,
+    "stock": 12,
+    "imagen": "img/SSD Kingston NV2 500 GB.jpg",
+    "descripcion": "Unidad de estado sólido NVMe para que la computadora arranque y abra programas mucho más rápido.",
+    "especificaciones": ["Capacidad: 500 GB", "Formato M.2 NVMe", "Interfaz PCIe"]
+  },
+  {
+    "id": 6,
+    "nombre": "Disco Externo Seagate 1 TB",
+    "categoria": "Almacenamiento",
+    "marca": "Seagate",
+    "precio": 68000,
+    "stock": 2,
+    "imagen": "img/Disco Externo Seagate 1 TB.jpg",
+    "descripcion": "Disco portátil para guardar copias de seguridad, fotos y proyectos.",
+    "especificaciones": ["Capacidad: 1 TB", "Conexión USB 3.0", "Formato portátil"]
+  },
+  {
+    "id": 7,
+    "nombre": "Pendrive SanDisk 64 GB",
+    "categoria": "Almacenamiento",
+    "marca": "SanDisk",
+    "precio": 11500,
+    "stock": 25,
+    "imagen": "img/Pendrive SanDisk 64 GB.jpg",
+    "descripcion": "Pendrive chico y práctico para llevar tus archivos a cualquier lado.",
+    "especificaciones": ["Capacidad: 64 GB", "Conexión USB-A"]
+  },
+  {
+    "id": 8,
+    "nombre": "Router Wi-Fi TP-Link Archer C6",
+    "categoria": "Redes",
+    "marca": "TP-Link",
+    "precio": 58000,
+    "stock": 6,
+    "imagen": "img/Router Wi-Fi TP-Link Archer C6.jpeg",
+    "descripcion": "Router de doble banda para tener buena cobertura en toda la casa.",
+    "especificaciones": ["Wi-Fi AC1200 doble banda", "4 antenas", "Puertos Gigabit"]
+  },
+  {
+    "id": 9,
+    "nombre": "Switch TP-Link 8 puertos Gigabit",
+    "categoria": "Redes",
+    "marca": "TP-Link",
+    "precio": 24500,
+    "stock": 7,
+    "imagen": "img/Switch TP-Link 8 puertos Gigabit.jpeg",
+    "descripcion": "Switch de escritorio para ampliar tu red cableada sin configuración.",
+    "especificaciones": ["8 puertos Gigabit", "Plug and play", "Formato de escritorio"]
+  },
+  {
+    "id": 10,
+    "nombre": "Cable de red Cat6 5 m",
+    "categoria": "Redes",
+    "marca": "Nexxt",
+    "precio": 4500,
+    "stock": 40,
+    "imagen": "img/Cable de red Cat6 5 m.jpeg",
+    "descripcion": "Cable de red UTP para conectar equipos al router o al switch.",
+    "especificaciones": ["Categoría 6", "Longitud: 5 m", "Conectores RJ45"]
+  },
+  {
+    "id": 11,
+    "nombre": "Monitor LG 24\" Full HD",
+    "categoria": "Monitores",
+    "marca": "LG",
+    "precio": 189000,
+    "stock": 4,
+    "imagen": "img/Monitor LG 24.jpeg",
+    "descripcion": "Monitor de 24 pulgadas para estudiar, programar y trabajar cómodo.",
+    "especificaciones": ["24 pulgadas", "Resolución Full HD", "Entrada HDMI"]
+  },
+  {
+    "id": 12,
+    "nombre": "Monitor Samsung 27\" curvo",
+    "categoria": "Monitores",
+    "marca": "Samsung",
+    "precio": 265000,
+    "stock": 0,
+    "imagen": "img/monitor samsung 27 curvo.jpeg",
+    "descripcion": "Monitor curvo de 27 pulgadas para una pantalla más envolvente.",
+    "especificaciones": ["27 pulgadas", "Pantalla curva", "Resolución Full HD"]
+  }
+]
